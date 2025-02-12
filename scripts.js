@@ -36,7 +36,7 @@ document.querySelectorAll('.scroll-link').forEach(link => {
     if (document.body.classList.contains('lang-th')) {
       languageToggle.textContent = "English";
     } else {
-      languageToggle.textContent = "Thai";
+      languageToggle.textContent = "คนไทย";
     }
   });
   
