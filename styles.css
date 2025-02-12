@@ -1,0 +1,48 @@
+/* styles.css */
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Language toggle: hide content based on body class */
+  body:not(.lang-th) .lang-th {
+    display: none;
+  }
+  body.lang-th .lang-en {
+    display: none;
+  }
+  
+  /* Increase certification badge image size */
+  .cert-badge {
+    height: 30px;
+    width: auto;
+  }
+  
+  /* Nearby landmarks list styling */
+  .landmarks-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+  .landmarks-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  .landmarks-list li i {
+    margin-right: 0.5rem;
+    color: var(--tw-color-primary, #2D8079);
+  }
+  
+  /* Responsive adjustments for logo */
+  @media (min-width: 768px) {
+    .logo img {
+      height: 80px;
+    }
+  }
+  
+  /* Testimonial card: using grid layout, no extra styles needed */
+  

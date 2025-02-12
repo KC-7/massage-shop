@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanna Sukha Massage Sanctuary</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-teal: #2D8079;
+            --secondary-gold: #D4AF37;
+        }
+
+        .font-thai {
+            font-family: 'Noto Sans Thai', sans-serif;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .treatment-card {
+            transition: transform 0.3s ease;
+        }
+
+        .treatment-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .language-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="bg-[#F5F0E6] font-[Poppins]">
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button onclick="toggleLanguage('en')" class="btn btn-sm btn-circle bg-[var(--secondary-gold)] text-white">EN</button>
+        <button onclick="toggleLanguage('th')" class="btn btn-sm btn-circle bg-[var(--primary-teal)] text-white">TH</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar bg-base-100 shadow-lg fixed top-0 z-50">
+        <div class="navbar-start">
+            <a class="btn btn-ghost normal-case text-xl">
+                <img src="logo.png" class="w-12 h-12" alt="Logo">
+                <span class="en-text">Lanna Sukha</span>
+                <span class="th-text hidden">ลานนาสุขา</span>
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="#home" class="en-text">Home</a><a href="#home" class="th-text hidden">หน้าหลัก</a></li>
+                <li><a href="#services" class="en-text">Services</a><a href="#services" class="th-text hidden">บริการ</a></li>
+                <li><a href="#pricing" class="en-text">Pricing</a><a href="#pricing" class="th-text hidden">ราคา</a></li>
+                <li><a href="#contact" class="en-text">Contact</a><a href="#contact" class="th-text hidden">ติดต่อ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero min-h-screen relative">
+        <video autoplay muted loop class="hero-video">
+            <source src="massage-video-placeholder.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-2xl">
+                <h1 class="mb-5 text-5xl font-bold en-text">Ancient Wisdom, Modern Serenity</h1>
+                <h1 class="mb-5 text-5xl font-bold th-text hidden font-thai">ภูมิปัญญาโบราณ ความสงบสมัยใหม่</h1>
+                <p class="mb-5 en-text">Experience authentic Lanna massage traditions in the heart of Chiang Mai</p>
+                <p class="mb-5 th-text hidden font-thai">สัมผัสประสบการณ์นวดล้านนาแท้กลางเมืองเชียงใหม่</p>
+                <button class="btn bg-[var(--primary-teal)] text-white en-text">Book Now</button>
+                <button class="btn bg-[var(--primary-teal)] text-white th-text hidden font-thai">จองตอนนี้</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 en-text">Our Signature Treatments</h2>
+            <h2 class="text-4xl font-bold text-center mb-12 th-text hidden font-thai">บริการพิเศษของเรา</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Treatment Cards -->
+                <div class="card bg-base-100 shadow-xl treatment-card">
+                    <figure class="px-4 pt-4">
+                        <img src="treatment1-placeholder.jpg" alt="Thai Massage" class="rounded-xl h-48 w-full object-cover">
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title en-text">Traditional Thai Massage</h3>
+                        <h3 class="card-title th-text hidden font-thai">นวดไทยแบบดั้งเดิม</h3>
+                        <p class="en-text">90-minute session combining acupressure and assisted yoga postures</p>
+                        <p class="th-text hidden font-thai">90 นาที การผสมผสานระหว่างการกดจุดและท่าโยคะ</p>
+                    </div>
+                </div>
+                
+                <!-- Add more treatment cards here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-[var(--primary-teal)] text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 en-text">Pricing & Packages</h2>
+            <h2 class="text-4xl font-bold text-center mb-12 th-text hidden font-thai">ราคาและแพ็คเกจ</h2>
+            
+            <div class="overflow-x-auto">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="en-text">Service</th>
+                            <th class="th-text hidden font-thai">บริการ</th>
+                            <th class="en-text">Duration</th>
+                            <th class="th-text hidden font-thai">ระยะเวลา</th>
+                            <th class="en-text">Price</th>
+                            <th class="th-text hidden font-thai">ราคา</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="en-text">Thai Massage</td>
+                            <td class="th-text hidden font-thai">นวดไทย</td>
+                            <td>60 min</td>
+                            <td>600 THB</td>
+                        </tr>
+                        <!-- Add more rows -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-4xl font-bold mb-8 en-text">Visit Us</h2>
+                    <h2 class="text-4xl font-bold mb-8 th-text hidden font-thai">เยี่ยมชมเรา</h2>
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242.11802910257993!2d98.98647941797715!3d18.784465254182426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3aedcf000001%3A0x74a4c17b0b7b0d8e!2sChiang%20Mai%20Night%20Bazaar!5e0!3m2!1sen!2sth!4v1716612345678!5m2!1sen!2sth" 
+                            class="w-full h-96 rounded-lg shadow-lg"
+                            allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+                
+                <div>
+                    <h2 class="text-4xl font-bold mb-8 en-text">Contact Form</h2>
+                    <h2 class="text-4xl font-bold mb-8 th-text hidden font-thai">แบบฟอร์มติดต่อ</h2>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Name" class="input input-bordered w-full">
+                        <input type="email" placeholder="Email" class="input input-bordered w-full">
+                        <textarea class="textarea textarea-bordered w-full h-32" placeholder="Message"></textarea>
+                        <button class="btn bg-[var(--primary-teal)] text-white en-text">Send Message</button>
+                        <button class="btn bg-[var(--primary-teal)] text-white th-text hidden font-thai">ส่งข้อความ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer p-10 bg-[var(--primary-teal)] text-white">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="logo-placeholder.png" class="w-24 h-24 mb-4">
+                    <p class="en-text">Charoen Prathet Rd, Chiang Mai</p>
+                    <p class="th-text hidden font-thai">ถนนเจริญประเทศ เชียงใหม่</p>
+                </div>
+                <div>
+                    <h6 class="font-bold mb-4 en-text">Opening Hours</h6>
+                    <h6 class="font-bold mb-4 th-text hidden font-thai">เวลาทำการ</h6>
+                    <p class="en-text">Daily 10:00 AM - 10:00 PM</p>
+                    <p class="th-text hidden font-thai">ทุกวัน 10:00 - 22:00 น.</p>
+                </div>
+                <div>
+                    <h6 class="font-bold mb-4 en-text">Contact</h6>
+                    <h6 class="font-bold mb-4 th-text hidden font-thai">ติดต่อ</h6>
+                    <p>+66 89 123 4567</p>
+                    <p>info@lannasukha.com</p>
+                </div>
+                <div>
+                    <h6 class="font-bold mb-4 en-text">Follow Us</h6>
+                    <h6 class="font-bold mb-4 th-text hidden font-thai">ติดตามเรา</h6>
+                    <div class="flex space-x-4">
+                        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-line fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Language Toggle
+        function toggleLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.querySelectorAll('.en-text').forEach(el => {
+                el.style.display = lang === 'en' ? 'block' : 'none';
+            });
+            document.querySelectorAll('.th-text').forEach(el => {
+                el.style.display = lang === 'th' ? 'block' : 'none';
+            });
+        }
+
+        // Initialize with English
+        toggleLanguage('en');
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
